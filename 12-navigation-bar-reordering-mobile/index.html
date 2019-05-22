@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="build/style.css" />
+    <script src="https://use.fontawesome.com/cc495104a2.js"></script>
+    <title>Flex Nav</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="top">
+        <h1>What the Flexbox?</h1>
+      </header>
+      <nav>
+        <a class="toggle-nav" href="#">🍔 MENU</a>
+        <ul>
+          <li><a href="#">Item 1</a></li>
+          <li><a href="#">Item 2</a></li>
+          <li><a href="#">Item 3</a></li>
+          <li><a href="#">Item 4</a></li>
+          <li><a href="#">Item 5</a></li>
+          <li><a href="#">Item 6</a></li>
+          <li class="social">
+            <a href="#"><i class="fa fa-facebook"></i> </a>
+          </li>
+          <li class="social">
+            <a href="#"><i class="fa fa-twitter"></i></a>
+          </li>
+          <li class="social">
+            <a href="#"><i class="fa fa-github"></i></a>
+          </li>
+          <li class="social">
+            <a href="#"><i class="fa fa-instagram"></i></a>
+          </li>
+        </ul>
+      </nav>
+      <section class="hero">
+        <img src="http://lorempixel.com/1000/500/abstract" alt="hero" />
+      </section>
+      <section class="description">
+        <p>A simple video course to help you master Flexbox.</p>
+        <p>Signup today to grab all videos and exercises!</p>
+      </section>
+      <section class="form">
+        <p>Sign me up!</p>
+        <form action="https://flexbox.io/api/customer/" target="_blank">
+          <input type="text" placeholder="Email" />
+          <input type="submit" value="Sign Me Up →" />
+        </form>
+      </section>
+      <footer>
+        <a href="">@shahidcodes</a>
+      </footer>
+    </div>
+  </body>
+  <script>
+    const nav = document.querySelector("nav");
+    document.querySelector(".toggle-nav").addEventListener("click", () => {
+      nav.classList.toggle("toggled");
+    });
+  </script>
+</html>

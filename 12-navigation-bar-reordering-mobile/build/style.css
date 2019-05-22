@@ -1,0 +1,190 @@
+/* Some CSS Setup - nothing to do with flexbox */
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: sans-serif;
+  margin: 0;
+  background-image: linear-gradient(260deg, #2376ae 0%, #c16ecf 100%);
+}
+
+li a {
+  width: 100%;
+  color: white;
+  font-weight: 100;
+  text-align: center;
+  display: inline-block;
+  padding: 20px 5px;
+  background: rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+}
+
+li a:hover {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  color: white;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+nav .toggle-nav {
+  display: none;
+  color: white;
+  text-decoration: none;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.toggle-nav:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+section,
+nav,
+footer,
+header {
+  width: 80%;
+  margin-top: 5px;
+}
+.hero {
+  border: 10px solid rgba(0, 0, 0, 0.2);
+}
+.hero img {
+  width: 100%;
+}
+
+section,
+footer {
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  text-align: center;
+}
+
+.form form {
+  margin-bottom: 1em;
+}
+
+.form form input[type="text"] {
+  border: none;
+  padding: 1em;
+  outline: 0;
+}
+
+form input[type="submit"] {
+  border: none;
+  padding: 1em;
+  background-color: #2376ae;
+  color: white;
+  cursor: pointer;
+  margin-left: -10px;
+}
+
+form input[type="submit"]:hover {
+  background-color: #18527a;
+}
+
+footer {
+  padding: 1em;
+  margin-bottom: 1em;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  /*   border: 1px solid black; */
+}
+
+nav li {
+  flex: 3;
+}
+
+nav .social {
+  flex: 1;
+}
+
+@media all and (max-width: 700px) {
+  nav ul {
+    flex-wrap: wrap;
+  }
+  nav li {
+    flex: 1 1 50%;
+  }
+}
+
+@media all and (max-width: 500px) {
+  section,
+  nav,
+  footer,
+  header {
+    width: 100%;
+    margin-top: 0px;
+    margin-bottom: 20px;
+  }
+
+  /*   Strech items on mobiles */
+  .wrapper {
+    align-items: stretch;
+  }
+  /* When nav is toggled */
+  nav.toggled ul {
+    max-height: 500px;
+  }
+
+  section,
+  header,
+  footer {
+    order: 999;
+  }
+  nav {
+    order: 1;
+  }
+  nav ul {
+    transition: all 0.5s ease-in-out;
+    max-height: 0;
+    overflow: hidden;
+  }
+  nav .toggle-nav {
+    text-align: center;
+    display: block;
+    padding: 1em;
+  }
+  nav li {
+    flex-basis: 100%;
+  }
+
+  /*   reorder */
+  .top {
+    order: 2;
+  }
+
+  .description {
+    order: 3;
+  }
+
+  .form {
+    order: 4;
+  }
+}
